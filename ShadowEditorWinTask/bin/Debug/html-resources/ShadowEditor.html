@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow editor</title>
+    <link rel="stylesheet" href="ShadowEditorStyles.css">
+</head>
+<body>
+    <div class="body_wrapper">
+        <div class="left_wapper">
+            <div class="propertyContainer">
+                <span class="propertyName">Horizontal Shadow Length</span>
+                <div class="slidecontainer">
+                    <input type="range" min="-200" max="200" value="0" class="slider" id="horizontalShadowRange">
+                    <div>
+                        <input id="horizontalShadowInput" class="number_input" type="number" min="-200" max="200" value="0">
+                        <label>px</label>
+                    </div>
+                </div>
+            </div>
+            <div class="propertyContainer">
+                <span class="propertyName">Vertical Shadow Length</span>
+                <div class="slidecontainer">
+                    <input type="range" min="-200" max="200" value="0" class="slider" id="verticalShadowRange">
+                    <div>
+                        <input id="verticalShadowInput" class="number_input" type="number" min="-200" max="200" value="0">
+                        <label>px</label>
+                    </div>
+                </div>
+            </div>
+            <div class="propertyContainer">
+                <span class="propertyName">Blur Radius</span>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="400" value="0" class="slider" id="blurRange">
+                    <div>
+                        <input id="blurInput" class="number_input" type="number" min="0" max="400" value="0">
+                        <label>px</label>
+                    </div>
+                </div>
+            </div>
+            <div class="propertyContainer">
+                <span class="propertyName">Spread Radius</span>
+                <div class="slidecontainer">
+                    <input type="range" min="-200" max="200" value="0" class="slider" id="spreadRange">
+                    <div>
+                        <input id="spreadInput" class="number_input" type="number" min="-200" max="200" value="0">
+                        <label>px</label>
+                    </div>
+                </div>
+            </div>
+            <div class="propertyContainer">
+                <label for="colorpicker">Shadow color</label>
+                <div class="colorPicker">
+                    <input type="text" id="colorpicker_input" value="rgb(0,0,0)">
+                    <input type="color" id="colorpicker" value="rgb(0,0,0)">
+                </div>
+            </div>
+            <div class="propertyContainer">
+                <span class="propertyName">Shadow Color Opacity</span>
+                <div class="slidecontainer">
+                    <input type="range" min="0.0" max="1.0" value="1" step="0.01" class="slider" id="opacityRange">
+                    <div>
+                        <input id="opacityInput" class="number_input" type="number" min="0" max="1" value="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right_wapper">
+            <div id="shadowBox" class="orange-box"></div>
+        </div>
+    </div>
+    <script src="ShadowEditorScripts.js"></script>
+</body>
+</html>
